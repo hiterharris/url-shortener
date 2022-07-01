@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import useBitly from './hooks/useBitly';
 import './App.css';
 
 function App() {
+  const [input, setInput] = useState('');
+  const [animation, setAnimation] = useState(false);
+  const { getUrl, shortUrl } = useBitly();
+
+  const handleChange = e => {
+    setInput(e.target.value);
+  };
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(shortUrl);
+    setAnimation(true);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="form">
+          <input type="text" placeholder="Enter long URL..." value={input} onChange={handleChange} />
+          <button onClick={() => getUrl(input)}>Submit</button>
+      </div>
+      <p>{shortUrl}</p>
+      {shortUrl && <div onClick={() => handleCopy()}>{!animation ? 'Copy' : 'Copied!'}</div>}
     </div>
   );
 }
 
-export default App;
+export default App
