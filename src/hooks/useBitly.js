@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 const useBitly = () => {
     const [data, setData] = useState();
-    const shortUrl = data?.link;
+    const shortUrl = data?.link || '';
 
     const getUrl = (longUrl) => {
         const requestOptions = {
