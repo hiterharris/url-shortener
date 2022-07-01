@@ -22,7 +22,7 @@ function App() {
       <div className="form">
         <div className="input">
           <input type="text" placeholder="Enter long URL..." value={input} onChange={handleChange} />
-          <img onClick={() => setInput('')} className="clear" src={clear} />
+          {shortUrl.length > 0 && <img onClick={() => setInput('')} className="clear" src={clear} />}
         </div>
           <button onClick={() => getUrl(input)}>Submit</button>
       </div>
