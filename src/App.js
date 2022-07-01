@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useBitly from './hooks/useBitly';
+import clear from './assets/clear.png';
 import './App.css';
 
 function App() {
@@ -19,7 +20,10 @@ function App() {
   return (
     <div className="App">
       <div className="form">
+        <div className="input">
           <input type="text" placeholder="Enter long URL..." value={input} onChange={handleChange} />
+          <img onClick={() => setInput('')} className="clear" src={clear} />
+        </div>
           <button onClick={() => getUrl(input)}>Submit</button>
       </div>
       <p>{shortUrl}</p>

@@ -13,10 +13,21 @@
   align-items: center;
 }
 
+.input {
+  display: flex;
+  align-items: center;
+}
+
 input {
-  font-size: 32px;
+  font-size: 28px;
   border: none;
   text-align: center;
+}
+
+.clear {
+  height: 24px;
+  padding: 8px;
+  margin-top: 6px;
 }
 
 button {
