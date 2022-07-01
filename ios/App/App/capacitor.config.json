@@ -1,0 +1,6 @@
+{
+	"appId": "com.urlshortener.hiterharris",
+	"appName": "url-shortener",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
