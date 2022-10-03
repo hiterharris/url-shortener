@@ -1,4 +1,4 @@
-.App {
+.App, .Input, .Results {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,26 +7,15 @@
   width: 100vw;
 }
 
-.form {
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-}
-
-/* .input {
-  display: flex;
-  align-items: center;
-} */
-
 input {
-  width: 100%;
+  width: 80%;
   padding: 0 16px;
   font-size: 28px;
   border: none;
   text-align: center;
 }
 
-.submit-button {
+.shorten-button {
   height: 50px;
   width: 60%;
   margin: 24px;
@@ -51,11 +40,7 @@ input {
   color: #356FFF;
 }
 
-.clear {
-  height: 24px;
-}
-
-.results {
+.short-url {
   height: 5%;
   display: flex;
   align-items: center;
@@ -66,9 +51,4 @@ input {
 .copy {
   height: 24px;
   padding-left: 16px;
-}
-
-.copied-icon {
-  height: 32px;
-  padding-right: 32px;
 }
