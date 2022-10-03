@@ -9,29 +9,26 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
 }
 
-.input {
+/* .input {
   display: flex;
   align-items: center;
-}
+} */
 
 input {
+  width: 100%;
+  padding: 0 16px;
   font-size: 28px;
   border: none;
   text-align: center;
 }
 
-.clear {
-  height: 24px;
-  padding: 8px;
-}
-
-button {
-  height: 42px;
-  width: 75%;
+.submit-button {
+  height: 50px;
+  width: 60%;
   margin: 24px;
   background-color: #356FFF;
   border: none;
@@ -42,7 +39,36 @@ button {
   font-weight: 500;
 }
 
-.short-url {
+.clear-button {
+  width: 25%;
+  height: 32px;
+  background-color: white;
+  border: 1px solid #356FFF;
+  border-radius: 12px;
+  font-family: 'Avenir';
+  font-size: 18px;
+  font-weight: 500;
+  color: #356FFF;
+}
+
+.clear {
+  height: 24px;
+}
+
+.results {
+  height: 5%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 24px;
+}
+
+.copy {
+  height: 24px;
+  padding-left: 16px;
+}
+
+.copied-icon {
+  height: 32px;
+  padding-right: 32px;
 }

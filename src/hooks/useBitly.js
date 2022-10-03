@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const useBitly = () => {
-    const [data, setData] = useState();
-    const shortUrl = data?.link || '';
+    const [shortUrl, setShortUrl] = useState('')
 
     const getUrl = (longUrl) => {
         const requestOptions = {
@@ -20,11 +19,11 @@ const useBitly = () => {
 
         fetch('https://api-ssl.bitly.com/v4/shorten', requestOptions)
             .then(response => response.json())
-            .then(data => setData(data))
+            .then(data => setShortUrl(data?.link))
             .catch(error => console.log('ERROR fetching shorten url: ', error));
     }        
 
-    return { getUrl, shortUrl };
+    return { getUrl, shortUrl, setShortUrl };
 }
 
 export default useBitly;
