@@ -12,7 +12,7 @@ const Result = (props) => {
       <input type="text" placeholder="Enter long URL..." value={input} onChange={e => setInput(e.target.value)} />
       <div className="short-url" onClick={() => handleCopy(shortUrl, setAnimation)}>
           <p>{shortUrl}</p>
-          <img className="copy" src={!animation ? copy : copied} />
+          <img className="copy" src={!animation ? copy : copied} alt="copy icon" />
       </div>
       <button className="clear-button" onClick={() => reset(setInput, setAnimation, setShortUrl)}>Clear</button>
     </div>
