@@ -1,4 +1,2 @@
-import Input from './Input';
-import Result from './Result';
-
-export { Input, Result }
+export { default as Input } from './Input';
+export { default as Result } from './Result';
