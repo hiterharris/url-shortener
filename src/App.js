@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 import useBitly from './hooks/useBitly';
 import { Input, Result } from './components';
+import { isDesktop } from 'react-device-detect';
 import './App.css';
 
 const App = () => {
-  const [input, setInput] = useState('');
-  const { getUrl, shortUrl, setShortUrl } = useBitly();
+  const { input, setInput, getUrl, response, handleCopy, animation } = useBitly();
 
   return (
-    <div className="App">
-      {!shortUrl ?
+    <div className={`App ${isDesktop ? 'desktop' : 'mobile'}`}>
       <Input
         input={input}
         setInput={setInput}
         getUrl={getUrl}
-      /> :
+        isDesktop={isDesktop}
+      />
       <Result
-        input={input}
-        setInput={setInput}
-        shortUrl={shortUrl}
-        setShortUrl={setShortUrl}
-      />}
+        response={response}
+        handleCopy={handleCopy}
+        animation={animation}
+      />
     </div>
   );
 }

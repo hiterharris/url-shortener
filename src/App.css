@@ -1,10 +1,39 @@
-.App, .Input, .Results {
+.App {
+  height: 100vh;
+}
+
+.App, .Input, .Result {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   width: 100vw;
+}
+
+.results { 
+  display: flex;
+  align-items: center;
+}
+
+.desktop input {
+  width: 20%;
+  padding: 0 16px;
+  font-size: 28px;
+  border: none;
+  text-align: center;
+}
+
+.desktop button {
+  height: 50px;
+  width: 20%;
+  margin: 24px;
+  background-color: #356FFF;
+  border: none;
+  border-radius: 16px;
+  font-family: 'Avenir';
+  font-size: 24px;
+  color: white;
+  font-weight: 500;
 }
 
 input {
@@ -13,6 +42,10 @@ input {
   font-size: 28px;
   border: none;
   text-align: center;
+}
+
+button {
+  cursor: pointer;
 }
 
 .shorten-button {
@@ -28,19 +61,7 @@ input {
   font-weight: 500;
 }
 
-.clear-button {
-  width: 25%;
-  height: 32px;
-  background-color: white;
-  border: 1px solid #356FFF;
-  border-radius: 12px;
-  font-family: 'Avenir';
-  font-size: 18px;
-  font-weight: 500;
-  color: #356FFF;
-}
-
-.short-url {
+.response {
   height: 5%;
   display: flex;
   align-items: center;
@@ -48,7 +69,11 @@ input {
   margin: 24px;
 }
 
-.copy {
+.error {
+  color: red;
+}
+
+.copy-icon {
   height: 24px;
   padding-left: 16px;
 }
